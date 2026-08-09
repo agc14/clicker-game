@@ -7,6 +7,7 @@ function love.load()
 
     money = 0
     m_add = 1
+    m_sec = 0
 end
 
 function love.mousepressed(x, y, button)
@@ -27,5 +28,5 @@ function love.draw()
     love.graphics.setBackgroundColor(1, 1, 1)
     love.graphics.setColor(0, 0, 0)
     love.graphics.print("$" .. money, 5, 0)
-    love.graphics.print("$ per sec: " .. m_add, 5, 10)
+    love.graphics.print("$ per sec: " .. m_sec, 5, 10)
 end
