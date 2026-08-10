@@ -1,18 +1,23 @@
 function love.load()
-    cursor = love.mouse.newCursor("assets/sprites/cursor.png", 0, 0)
+    love.graphics.setDefaultFilter("nearest", "nearest")
+
+    local cursor = love.mouse.newCursor("assets/sprites/cursor.png", 0, 0)
     love.mouse.setCursor(cursor)
 
-    font = love.graphics.newFont("fonts/ComicNeueSansID.ttf", 20)
+    local font = love.graphics.newFont("fonts/ComicNeueSansID.ttf", 20)
     love.graphics.setFont(font)
+
+    clicksound = love.audio.newSource("assets/sfx/clicksound.wav", "static")
 
     money = 0
     m_add = 1
-    m_sec = 0
+    m_sec = 1
 end
 
 function love.mousepressed(x, y, button)
     if button == 1 then
         money = money + m_add
+        clicksound:play()
     end
 end
 
@@ -23,6 +28,8 @@ function love.update(dt)
         end
     end
 end
+
+
 
 function love.draw()
     love.graphics.setBackgroundColor(1, 1, 1)
