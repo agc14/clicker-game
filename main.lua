@@ -21,7 +21,23 @@ function love.mousepressed(x, y, button)
     end
 end
 
+local t = 0
+local count = 0
+
 function love.update(dt)
+    if t < 2 then
+        t = t + dt
+    else
+        t = 0
+        count = count + 1
+    end
+
+    if count == 1 then
+        money = money + m_sec
+        count = 0
+    end
+end
+
     function love.keypressed(key)
         if key == "escape" then
             love.event.quit()
