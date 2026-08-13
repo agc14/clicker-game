@@ -21,6 +21,8 @@ local money = {
 --TODO: Implement saving using .json?
 
 function love.load()
+    anim8 = require "lib/anim8"
+    
     love.graphics.setDefaultFilter("nearest", "nearest")
     love.mouse.setCursor(textures.cursor)
     love.graphics.setFont(fonts.main)

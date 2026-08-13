@@ -1,5 +1,5 @@
 local textures = {
-    cursor = love.mouse.newCursor("assets/sprites/cursor.png", 0, 0)
+    cursor = love.mouse.newCursor("assets/sprites/system/cursor.png", 0, 0)
 }
 
 return textures
