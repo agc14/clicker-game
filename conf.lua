@@ -1,4 +1,4 @@
 function love.conf(t)
-    t.title = "Clicker Game"
+    t.title = "Money Maker"
     t.window.fullscreen = true
 end
