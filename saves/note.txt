@@ -1,3 +1,0 @@
-here there are going to be several json files used to store save data
-probably going to be called "file1", "file2", "file3"
-however, because i'm not familiar with json and we have no need for save data yet, these arent put in
